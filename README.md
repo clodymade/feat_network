@@ -40,16 +40,27 @@ This module leverages **OkHttp** for HTTP and WebSocket operations and uses **Ko
 
 ### **1. Add feat_network to Your Project**
 
-Include `feat_network` as a module in your project. Add the following to your `settings.gradle` file:
+To include `feat_network` via **JitPack**, follow these steps:
 
-```gradle
-include ':feat_network'
-```
+1. Add JitPack to your project-level `build.gradle` file:
 
-Then, add it as a dependency in your app module’s build.gradle file:
-```gradle
-implementation project(":feat_network")
-```
+    ```gradle
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+    ```
+
+2. Add `feat_network` to your module-level `build.gradle` file:
+
+    ```gradle
+    dependencies {
+        implementation 'com.github.clodymade:feat_network:1.0.2'
+    }
+    ```
+
+3. Sync your project.
 
 ---
 
